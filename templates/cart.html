@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block 'main' %}
+<h3>Cart page</h3>
+<img src="{% static 'images/b4.jpg' %}" style="box-shadow: 7px 7px 7px  darkgray; border: 3px solid red;">
+<br>
+<br>
+<button class="btn btn-warning" onclick="greet()">click me </button>
+<script src="{% static 'js/main.js' %}">
+
+</script>
+{% endblock  %}

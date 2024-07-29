@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Hi I am ujjawala{{x}}</h5>
+    <h2>{{y}}</h2>
+    <h2>{{z}}</h2>
+    {% if a > b %}
+       <h3 style="color: blue;">{{a}} is greater </h3>
+    {% else %}
+       <h3 style="color: blueviolet;">{{b}} is Greater</h3>
+    {% endif %}
+    <br>
+ 
+
+    <br ------------------------------------------>
+    {% comment %}
+     {% for i in y %}
+       {{for loop.counter}}
+       {{i}} 
+    {% endcomment %}
+
+    {% for i in data %}
+        <b>student Id:</b>{{i.id}}
+        <br --------------------->
+        <b>student Name:</b>{{i.name}}
+        <br ------------------->
+        <b>City:</b>{{i.city}}
+        <b>-------------------------</b><br>
+    {% endfor %}
+
+</body>
+</html>

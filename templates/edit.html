@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+
+    <div class="container mt-5 shadow bg-light border my-4 col-md-5 " >
+        <div class="container  my-8 col-md-8" >
+         <h2 class="text-center my-5 text-success"> Edit Record</h2>
+         {% for i in data %}
+         <form  method="post" style="height: 600px;">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" value="{{i.name}}" name="name" aria-describedby="emailHelp" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="mob">Contact no:</label>
+                <input type="number" class="form-control" value="{{i.mob}}" name="mob" aria-describedby="mob" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" value="{{i.email}}" name="email" aria-describedby="emailHelp" required>
+                
+            </div>
+           
+            <div class="form-group">
+                <label for="texterea">Message</label>
+                <textarea type="texterea" class="form-control" id="texterea"  name="msg" aria-describedby="texterea" rows="4" required >{{i.msg}}</textarea>
+            
+            </div>
+           
+           
+             
+            <button  type="submit" class="btn btn-success my-4 col-md-12">Submit</button>
+        </form>
+        {% endfor %}
+    </div>
+
+
+{% include 'footer.html' %}
